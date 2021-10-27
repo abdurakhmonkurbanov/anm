@@ -1,0 +1,442 @@
+﻿
+/*account*/
+.account {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    right: 0;
+    margin: 130px 0 0 0px;
+    width: 300px;
+    background-color: #41c6b2;
+    padding: 0 15px;
+    z-index: 999;
+}
+
+    .account > .row > header {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #2c9585;
+        top: -10px;
+    }
+
+    .account > .row > .hospital-name {
+        position: relative;
+        width: 100%;
+        /*background-color: #2c9585;*/
+        color: white;
+        text-align: center;
+        bottom: 10px;
+        padding-top: 10px;
+        padding-bottom:10px;
+        overflow: hidden;
+        top:5px;
+    }
+
+    .account > .row > header > h3 {
+        color: white;
+        position: relative;
+        text-align: center;
+        top: 15px;
+    }
+
+.account-label {
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+}
+
+    .account-label > input[type="checkbox"] {
+        position: relative;
+        top: 1px;
+    }
+
+@media (max-height:600px) {
+    .account {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/*account*/
+
+
+/*body-styles*/
+.for-left-menu {
+    padding-left: 240px;
+}
+
+.for-top-menu {
+    padding-top: 60px;
+}
+
+.main-container {
+    padding-bottom: 100px !important;
+    position: relative;
+    min-height: 100% !important;
+}
+/*body-styles*/
+
+
+@media (min-width:767px) and (max-width:945px ) {
+    .for-top-menu {
+        padding-top: 120px;
+    }
+}
+/*main-container*/
+
+
+/*left-menu*/
+.left-menu {
+    position: fixed;
+    height: 100%;
+    width: 240px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 60px;
+    list-style: none;
+    background-color: #35a291;
+    padding-bottom: 20px;
+}
+
+.vertical-menu {
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    display: block;
+    height: 100%;
+}
+
+    .vertical-menu > li {
+        display: block;
+    }
+
+        .vertical-menu > li > a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            font-size: 16px;
+            font-family: Segoe UI;
+            text-decoration: none;
+            position: relative;
+            /*white-space: nowrap;*/
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            padding-right: 30px;
+        }
+
+            .vertical-menu > li > a.toggle-link {
+                font-size: 16px;
+            }
+
+                .vertical-menu > li > a.toggle-link > i {
+                    position: absolute;
+                    right: 20px;
+                    top: 35%;
+                    bottom: auto;
+                }
+
+            .vertical-menu > li > a:hover,
+            .vertical-menu > li > a:focus,
+            .vertical-menu > li > a:active,
+            .vertical-menu > li > a.active {
+                text-decoration: none;
+                background-color: #2c9585;
+            }
+
+        .vertical-menu > li > .toggle-links {
+            background-color: #2c9585;
+            -webkit-box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
+        }
+
+            .vertical-menu > li > .toggle-links > li > a {
+                color: white;
+                font-size: 14px;
+                padding: 15px;
+                display: block;
+                text-decoration: none;
+                padding-left: 30px;
+            }
+
+                .vertical-menu > li > .toggle-links > li > a:hover {
+                    background-color: #35a291;
+                    text-decoration: none;
+                }
+
+@media (min-width:767px) and (max-width:945px ) {
+    .left-menu {
+        padding-top: 120px;
+    }
+}
+/*left-menu*/
+
+
+/*administration links*/
+.administration-links > div > h3 > a {
+    color: #555;
+    text-decoration: none;
+}
+
+    .administration-links > div > h3 > a:hover,
+    .administration-links > div > h3 > a:focus,
+    .administration-links > div > h3 > a:active {
+        color: #007cca;
+    }
+/*administration links*/
+
+
+/*journal-table*/
+.journal-table > tbody > tr > td,
+.journal-table > thead > tr > th {
+    width: 12.5% !important;
+    text-align: center;
+}
+/*journal-table*/
+
+
+/*avatar*/
+.avatar {
+    width: 200px;
+    position: relative;
+}
+
+.avatar-container {
+    width: 100%;
+    max-height: 260px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+    .avatar-container > img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+/*avatar*/
+
+
+/*fixed-form*/
+.fixed-form {
+    position: relative;
+    width: 650px;
+}
+
+    .fixed-form > .form-group > label {
+        font-family: Segoe UI;
+    }
+
+        .fixed-form > .form-group > label::after {
+            content: ":";
+        }
+/*fixed-form*/
+
+
+/*specialty*/
+.specialty {
+    position: relative;
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+    .specialty > .panel-group {
+        margin-bottom: 5px;
+    }
+
+.doctor-name {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 62px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    padding-left: 70px;
+    color: #555 !important;
+    font-size: 16px;
+    font-family: Segoe UI Light;
+    border: 1px solid #35a291;
+    text-decoration: none !important;
+}
+
+    .doctor-name > span:last-child {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .doctor-name:hover,
+    .doctor-name:active,
+    .doctor-name.active {
+        background-color: #35a291;
+        color: white !important;
+        border: 1px solid #2c9585;
+    }
+
+    .doctor-name:last-child {
+        margin-bottom: 0;
+    }
+
+    .doctor-name > .avatar {
+        display: block;
+        position: relative;
+        height: 60px;
+        width: 60px;
+        margin-left: -70px;
+        overflow: hidden;
+        border-right: 1px solid #2c9585;
+    }
+
+        .doctor-name > .avatar > img {
+            position: relative;
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+
+.panel-heading > .fa-spinner {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+}
+/*specialty*/
+
+/*24.04.2014*/
+.element {
+    width: 200px;
+    height: 200px;
+    background-color: #35a291;
+    padding: 40px 15px 15px 15px;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+}
+
+    .element > a {
+        text-decoration: none !important;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+        .element > a > .fa,
+        .element > a > .glyphicon {
+            font-size: 50px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .element > a > p {
+            font-weight: bold;
+            margin-top: 20px;
+            color: white;
+        }
+
+    .element > .footer > .dropdown > .dropdown-menu {
+        right: 0;
+        left: auto;
+        width: 230px;
+    }
+
+    .element > .footer {
+        display: block;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background-color: #2c9585;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+        .element > .footer > li {
+            float: right;
+            position: relative;
+        }
+
+            .element > .footer > li > a {
+                display: block;
+                padding: 10px 15px;
+                font-size: 14px;
+                background-color: #2c8585;
+                color: white;
+            }
+
+
+
+/*footer*/
+.main-footer {
+    background-color: #35a291;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 15px;
+    font-size: 14px;
+    color: white;
+}
+
+    .main-footer > .row > .left {
+        text-align: left;
+    }
+
+    .main-footer > .row > .right {
+        text-align: right;
+    }
+
+    .main-footer.green {
+        background-color: #34ad9b;
+    }
+
+        .main-footer.green > .row > .left {
+            text-align: left;
+            color: white;
+        }
+
+        .main-footer.green > .row > .right {
+            text-align: right;
+            color: white;
+        }
+
+
+/*footer*/
+/*24.09.2014*/
+
+
+/*06.10.2014*/
+
+.btn-on,
+.btn-off {
+    font-weight: bold;
+    color: #aaa;
+}
+
+    .btn-on.active,
+    .btn-off.active {
+        color: white;
+    }
+
+    .btn-on.active {
+        background-color: #2c9585;
+    }
+
+    .btn-off.active {
+        background-color: #ff2b2b;
+    }
+
+/*06.10.2014*/
+
+
+/*07.10.2014*/
+
+.k-window-content.k-content {
+    padding-top: 20px;
+}

@@ -1,0 +1,20 @@
+﻿.t-grid-header .t-header .t-link {
+    height: 30px !important;
+}
+
+.t-filter-options select {
+    width: 132px;
+}
+
+.t-filter-options input {
+    width: 132px;
+}
+
+.t-grouping-header, .t-grouping-dropclue {
+    height: 29px;
+}
+.t-header, .t-grid-header {
+    background: none repeat scroll 0 0 #2C9585;
+    border-color: #fff;
+    color: #fff;
+}

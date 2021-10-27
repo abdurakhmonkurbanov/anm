@@ -1,0 +1,14 @@
+﻿@font-face {
+    font-family: Lucida Handwriting Italic;
+    src: url('Lucida Handwriting Italic.eot'), url('Lucida Handwriting Italic.ttf') format('truetype'), url('Lucida Handwriting Italic.woff');
+}
+
+@font-face {
+    font-family: Segoe UI Bold;
+    src: url('Segoe UI Bold.eot'), url('Segoe UI Bold.ttf') format('truetype'), url('Segoe UI Bold.woff');
+}
+
+@font-face {
+    font-family: Segoe UI Light;
+    src: url('Segoe UI Light.eot'), url('Segoe UI Light.ttf') format('truetype'), url('Segoe UI Light.woff');
+}

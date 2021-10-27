@@ -1,0 +1,310 @@
+﻿/* info and errors */
+
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*users panel bar*/
+.team-mate.selected-mate {
+    background-color: #99d3ff;
+}
+
+.team-mate {
+    margin: 2px 0 2px 0;
+    padding: 5px;
+    font: 75% Arial,Helvetica,sans-serif;
+}
+
+    .team-mate:after {
+        content: ".";
+        display: block;
+        height: 0;
+        line-height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .team-mate div {
+        font-size: 1.4em;
+        font-weight: normal;
+        padding-top: 20px;
+    }
+
+    .team-mate p {
+        margin: 5px 0;
+    }
+
+    .team-mate img {
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin: 5px 15px 5px 5px;
+        border: 1px solid #ccc;
+    }
+/*14.08.2014 for Telerik*/
+.t-grid-filter {
+    margin: -1.5em -0.6em -0.3em 3px;
+}
+
+.t-grid-header .t-header .t-link {
+    height: 24px;
+}
+
+.t-grouping-header, .t-grouping-dropclue {
+    height: 36px;
+}
+
+.t-filter-options select {
+    width: -moz-available !important;
+}
+
+.t-filter-options input {
+    width: -moz-available !important;
+}
+
+.t-button span.fa {
+    font-size: inherit;
+    line-height: 1;
+    text-indent: initial;
+}
+
+.input-date {
+    width: 100px !important;
+}
+
+fieldset.fieldset-border {
+    border: 1px groove #ddd !important;
+    padding: 1.4em 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    /*box-shadow:  0px 0px 0px 0px #000;*/
+}
+
+legend.fieldset-border {
+    /*font-size: 1.2em !important;*/
+    /*font-weight: bold !important;*/
+    text-align: left !important;
+    border: 1px groove #ddd !important;
+    padding: 1px 5px;
+    margin-bottom: 0;
+}
+
+.input-group .form-control {
+    z-index: 0 !important;
+}
+
+.select2-drop-mask {
+    z-index: 19998;
+}
+
+.select2-drop {
+    z-index: 19999;
+}
+
+.t-window .select2-search {
+    z-index: 20000;
+}
+
+#contextMenu hr {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.diagnose-info tr td:first-child {
+    width: 300px;
+}
+
+.diagnose-info tr td:last-child {
+    color: #777;
+}
+
+.vaccination .toggle-menu {
+    position: static;
+}
+
+.vaccination .toggle-link {
+    display: inline-block;
+}
+
+.address-modal {
+    z-index: 11000;
+}
+
+.vaccination-content .btn {
+    height: 34px;
+}
+
+    .vaccination-content .btn:hover {
+        height: 34px;
+    }
+
+.input-group-addon {
+    background-color: white;
+    border-left: 0 none !important;
+    border-top: 0 none !important;
+}
+
+.btn-toolbar {
+    margin-bottom: 10px;
+}
+
+.page-header {
+    border-bottom: none;
+    margin: 20px 0 0;
+}
+
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+
+/*/*/
+.rot-90 {
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: center center;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: center center;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: center center;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+.vertical-header {
+    text-align: center;
+    white-space: nowrap;
+    text-align: center;
+    max-width: 50px;
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -moz-transform: rotate(270deg); /* Firefox */
+    -webkit-transform: rotate(270deg); /* Safari and Chrome */
+    -o-transform: rotate(270deg); /* Opera */
+}
+
+.vertical-center {
+    vertical-align: bottom !important;
+}
+
+/*------*/
+
+.text-center-bold {
+    padding: 4px;
+    text-align: center;
+    font-weight: bold !important;
+}
+
+.custom-table td.colum-1 {
+    text-align: left;
+}
+
+.custom-table th span {
+    /*outline: 1px solid red;*/
+    display: table-cell;
+    -moz-transform: rotate(270deg) translate(0, 0);
+    -moz-transform-origin: 50% 50%;
+    width: 40px;
+    max-width: 50px;
+    height: 40px;
+    white-space: nowrap;
+}
+
+.custom-table th.colum-1 {
+    width: 170px;
+    vertical-align: bottom !important;
+    padding: 35px 0px 10px 0 !important;
+    /*height: 180px !important;*/
+}
+
+    .custom-table th.colum-1 span {
+        -ms-transform: rotate(270deg); /* IE 9 */
+        -moz-transform: rotate(270deg); /* Firefox */
+        -webkit-transform: rotate(270deg); /* Safari and Chrome */
+        -o-transform: rotate(270deg); /* Opera */
+        width: 170px;
+    }
+
+.dl-horizontal dt {
+    min-width: 300px;
+}
+
+.dl-horizontal dd {
+    margin-left: 320px;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.white-space-normal {
+    white-space: normal !important;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #2C9585;
+    border-color: #2C9585;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+}
+.glyphicon-loader:before
+{
+    box-sizing:border-box;
+    content: url('/Content/images/inline-loader.gif')
+}
+.glyphicon-loader:after
+{
+    box-sizing:border-box;
+   
+}

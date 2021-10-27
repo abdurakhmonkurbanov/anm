@@ -1,0 +1,190 @@
+
+/*
+    #2c9585 
+    rgba(44, 149, 133, 0.3);
+*/
+
+/***************************************************************************select2-simple**************************************************************************/
+
+.select2-container {
+    width: 100%;
+}
+
+.select2-container > .select2-choice {
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(44, 149, 133, 0.3);
+    background-color: #fff;
+    background-image: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    filter: none;
+    padding-right: 50px;
+}
+
+.select2-container > .select-choice > .select2-search-choice-close {
+    right: 35px!important;
+    position: absolute!important;
+    display: block!important;
+    display: none;
+}
+
+.select2-container > .select2-choice > .select2-arrow {
+    width: 30px;
+    border-left-color: #2c9585;
+    display: none;
+}
+
+.select2-container > .select2-choice > .select2-arrow > b {
+    background-position: 7px 4px;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    filter: none;
+    background-color: #eee;
+}
+
+/*active - крестик*/
+.select2-container.select2-allowclear > .select2-choice > .select2-search-choice-close,
+.select2-container.select2-allowclear.select2-container-active > .select2-choice > .select2-search-choice-close {
+    display: none;
+}
+/*active - крестик*/
+
+/*open*/
+.select2-container.select2-dropdown-open > .select2-choice {
+    border-color: #2c9585;
+}
+
+/*стрелка*/
+.select2-container.select2-dropdown-open > .select2-choice > .select2-arrow {
+    display: block;
+}
+
+.select2-container.select2-dropdown-open > .select2-choice > .select2-arrow > b {
+    background-position: -11px 4px;
+    background-color: transparent;
+}
+/*стрелка*/
+/*open*/
+
+
+/*hover*/
+.select2-container > .select2-choice:hover {
+    border-color: #2c9585;
+}
+
+/*крестик*/
+.select2-container.select2-allowclear:hover > .select2-choice > .select2-search-choice-close,
+.select2-container.select2-allowclear.select2-container-active:hover > .select2-choice > .select2-search-choice-close {
+    display: block;
+}
+/*крестик*/
+
+.select2-container > .select2-choice:hover > .select2-arrow {
+    display: block;
+}
+/*hover*/
+
+
+/*select-2 dropdown(bottom)*/
+.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active {
+    margin-top: 5px;
+    padding:10px 5px;
+    border: 1px solid #2c9585;
+}
+/*select-2 dropdown(bottom)*/
+
+
+/*select-2 dropdown(top)*/
+.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active.select2-drop-above {
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+/*select-2 dropdown(top)*/
+
+
+/***************************************************************************select2-simple**************************************************************************/
+
+
+/***************************************************************************select2-input-group**************************************************************************/
+.select-2-input-group {
+    width: 100%;
+    position: relative;
+    padding-right: 40px;
+    height: 34px;
+    overflow: hidden;
+}
+
+.select-2-input-group > .select2-container {
+    width: 120%;
+    display: block !important;
+}
+
+.select-2-input-group:hover > .select2-container {
+    width: 100%;
+}
+
+.select-2-input-group > .btn,
+.select-2-input-group > a.btn {
+    position: absolute;
+    width: 40px;
+    height: 34px;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.select-2-input-group > .select2-container.select2-container-active,
+.select-2-input-group > .select2-container.select2-allowclear.select2-container-active.select2-dropdown-open {
+    width: 100%;
+}
+
+.select-2-input-group:hover > .btn {
+    display: block;
+}
+
+.btn.db {
+    display: block!important;
+}
+/**************************************************************************/
+
+
+.select-2-input-group > .select2-container,
+.select-2-input-group > .select2-container.select2-container-active {
+    width: 120%;
+}
+.select-2-input-group:hover > .select2-container,
+.select-2-input-group > .select2-container.select2-dropdown-open.select2-container-active {
+    width: 100%;
+}
+
+.select-2-input-group:hover > .select2-container > .select2-choice {
+    border: 1px solid #2c9585;
+}
+
+.select-2-input-group:hover > .select2-container > .select2-choice > .select2-arrow {
+    display: block;
+}
+
+.input-group.select-2-input-group:hover > .select2-container.select2-allowclear > .select2-choice > .select2-search-choice-close,
+.input-group.select-2-input-group > .select2-container.select2-allowclear.select2-dropdown-open > .select2-choice > .select2-search-choice-close {
+    display: block;
+}
+
+/*******************************/
+
+.select2-container.form-control {
+    border: none;
+    height: auto;
+    box-shadow: none;
+}
+
+.select2-container.form-control .select2-choice {
+    height: auto!important;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/*******************************/
+

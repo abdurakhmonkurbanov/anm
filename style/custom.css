@@ -1,0 +1,87 @@
+﻿.vertical-form-group {
+    padding: 0 15px;
+    margin-top: 20px;
+}
+
+/*toggle-menu*/
+.toggle-menu {
+    position: relative;
+}
+
+.toggle-link {
+    display: block;
+}
+
+    .toggle-link > i {
+        margin-left: 15px;
+    }
+
+.main-page-toggle-link,
+.main-page-toggle-link:hover,
+.main-page-toggle-link:focus,
+.main-page-toggle-link:active {
+    color: #666!important;
+    font-size: 24px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-family: Segoe UI;
+}
+
+.toggle-links {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+}
+
+.main-page-toggle-links > li {
+    margin-top: 5px;
+}
+
+    .main-page-toggle-links > li > a {
+        color: #555;
+        font-size: 16px;
+        font-family: Segoe UI;
+        text-decoration: none;
+    }
+
+        .main-page-toggle-links > li > a:hover,
+        .main-page-toggle-links > li > a:focus,
+        .main-page-toggle-links > li > a:active {
+            text-decoration: none;
+        }
+/*toggle-menu*/
+
+
+/*a.btn*/
+a.btn-primary,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active,
+a.btn-success,
+a.btn-success:hover,
+a.btn-success:focus,
+a.btn-success:active {
+    color: white;
+    text-decoration: none;
+    display: table;
+    float: left;
+    /*height: 34px;*/
+    padding: 6px 12px;
+}
+
+    a.btn-primary > .fa, a.btn-success > .fa {
+        font-size: 18px;
+        display: table-cell!important;
+        vertical-align: middle!important;
+    }
+/*a.btn*/
+
+
+
+/*table-body*/
+.table-body {
+    width: 100%;
+    background-color: #00ced1;
+}
+/*table-body*/

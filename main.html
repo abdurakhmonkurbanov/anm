@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="accept-language" content="ru-RU">
+    <title>Оплата - MedData</title>
+
+    <link rel="shortcut icon" href="http://meddatademo.bepro.uz/Content/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://meddatademo.bepro.uz/Content/images/favicon.ico" type="image/x-icon">
+
+
+    <meta name="viewport" content="width=device-width">
+    <!--Icons-->
+
+    <link href="style/navigation-icon.css" rel="stylesheet">
+    <link href="style/font-awesome.min.css" rel="stylesheet">
+    <link href="style/Fonts.css" rel="stylesheet">
+    <link href="style/notify.css" rel="stylesheet">
+    <!--Icons-->
+    <!--Bootstrap - 3.2.0-->
+    
+    <link href="style/bootstrap.css" rel="stylesheet">
+<link href="style/bootstrap-theme.css" rel="stylesheet">
+
+
+    <!--02.10.2014 select-2-->
+    <link href="style/select2.css" rel="stylesheet">
+    <link href="style/select2-bootstrap.css" rel="stylesheet">
+    <!--02.10.2014 select-2-->
+    <!--Bootstrap - 3.2.0-->
+    <!--Main Styles-->
+    <link href="style/components.css" rel="stylesheet">
+<link href="style/bootstrap-edit.css" rel="stylesheet">
+<link href="style/main-styles.css" rel="stylesheet">
+<link href="style/bepro-select-2.css" rel="stylesheet">
+<link href="style/custom.css" rel="stylesheet">
+
+    <!--Main Styles-->
+    <!--Kendo-->
+    <link href="style/kendo.common.min.css" rel="stylesheet">
+    <link href="style/kendo.metro.med.min.css" rel="stylesheet">
+    <link href="style/kendo.silver.mobile.min.css" rel="stylesheet">
+    <link href="style/kendo.custom.css" rel="stylesheet">
+    <link href="style/Site.css" rel="stylesheet">
+    
+
+    <link href="style/normalize.min.css" rel="stylesheet">
+
+</head>
+<body class="for-top-menu">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            
+            <a class="navbar-brand" href="">
+            <br>
+ <div class="hospital-name"><img src="./images/meddata_ico.png" width="32">  Astro Neyromed    </div>
+            </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                <li id="Reporting">
+<a href="http://meddatademo.bepro.uz/ru-RU/Cashbox">Главная</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    
+                        <a href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" class="dropdown-toggle" data-toggle="dropdown">
+admin
+                            <i class="icon-angle-down "></i>
+                        </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="http://meddatademo.bepro.uz/ru-RU/Account/Profile">Профиль </a></li>
+                        <li id="Dashboard">
+<a href="http://meddatademo.bepro.uz/ru-RU/Dashboard">Администрирование</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://meddatademo.bepro.uz/ru-RU/Account/LogOff">Выход</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+
+
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="language name">
+                русский (Россия)&nbsp;<span class="sf-sub-indicator">
+                    <i class="icon-angle-down "></i>
+                </span>
+            </span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="divider"></li>
+                <li>
+                    <a href="http://meddatademo.bepro.uz/uz-Cyrl-UZ/Cashbox/Payment">Ўзбекча (Ўзбекистон&nbsp;Республикаси)</a>
+                </li>
+                <li>
+                    <a href="http://meddatademo.bepro.uz/uz-Latn-UZ/Cashbox/Payment">O'zbekcha (O'zbekiston Respublikasi)</a>
+                </li>
+        </ul>
+    </li>
+</ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container-fluid main-container">
+        
+
+<p>&nbsp;</p>
+<div class="row">
+ 
+   
+            <div class="input-group">
+                <input type="text" class="form-control" onkeypress="searchKeyPress(event);" id="search_input" placeholder="Введите ФИО пациента или номер маршрутной карты" style="z-index:0">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" id="searchPatient" type="button">Найти</button>
+                </span>
+            </div>
+        </div>
+<br>
+
+
+     
+            <div id="grid" data-role="grid" class="k-grid k-widget"><div class="k-grid-header" style="padding-right: 26px;"><div class="k-grid-header-wrap"><table role="grid"><tr role="row"><th role="columnheader" data-field="Id" data-title="Id" style="display:none" class="k-header">Id</th><th role="columnheader" data-field="_DateOfIssue" data-title="Дата выдачи" class="k-header">Дата выдачи</th><th role="columnheader" data-field="PatientRoadMapNumber" data-title="№ маршрутной карты" class="k-header">№ маршрутной карты</th><th role="columnheader" data-field="FullName" data-title="ФИО пациента" class="k-header">ФИО пациента</th><th role="columnheader" data-field="TotalCurrentPrice" data-title="Сумма к оплате" class="k-header">Сумма к оплате</th><th role="columnheader" data-field="_DebtAmount" data-title="Долг" class="k-header">Долг</th><th role="columnheader" data-field="PaymentIsMade" data-title="Оплата" class="k-header">Оплата</th></tr></table></div></div></div>
+<br>
+<br>
+
+ <table width="100%" bordercolor="#3366FF" align="center" border="2"><tr class="title1"><td>Mijozning familiyasi va ismi </td><td align="center">Mijozning<br>
+passport seriyasi</td><td>Tanlangan xizmat </td><td> Doktor</td><td> Xizmatlar</td><td><b>To'lagan puli</b></td><td width="30">Navbati</td></tr>
+<tr class="title1"><td>Mijozning familiyasi va ismi </td><td align="center">Mijozning<br>
+passport seriyasi</td><td>Tanlangan xizmat </td><td> Doktor</td><td> Xizmatlar</td><td><b>To'lagan puli</b></td><td width="30">Navbati</td></tr>
+<tr class="title1"><td>Mijozning familiyasi va ismi </td><td align="center">Mijozning<br>
+passport seriyasi</td><td>Tanlangan xizmat </td><td> Doktor</td><td> Xizmatlar</td><td><b>To'lagan puli</b></td><td width="30">Navbati</td></tr>
+
+</table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+        <div class="col-xs-12 main-footer">
+
+  <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <div class="text-left">
+               
+                <span>© Все права защищены.</span>
+              
+            </div>
+           
+        </div>
+        <div class="col-md-4 col-sm-4" style="padding-left:20px; font-weight:700; text-align:center"></div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-right">
+                Bepro 2014 - 2018 <span>  v1.0 06.09.2017</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        
+    </div>
+    <script src="style/jquery-1.11.1.js"></script>
+<script src="style/jquery-migrate-1.2.1.js"></script>
+<script src="style/jquery.unobtrusive-ajax.js"></script>
+<script src="style/jquery.validate.js"></script>
+<script src="style/jquery.validate.unobtrusive.js"></script>
+<script src="style/modernizr-2.6.2.js"></script>
+<script src="style/knockout-3.2.0.js"></script>
+<script src="style/knockout.binders.js"></script>
+<script src="style/Application.js"></script>
+<script src="style/bootbox.js"></script>
+<script src="style/toastr.js"></script>
+
+    <script src="style/jquery.fileDownload.js"></script>
+    <script src="style/bootstrap.min.js"></script>
+    <!--- kendo --->
+    <script src="style/kendo.web.min.js"></script>
+    <script src="style/knockout-kendo.min.js"></script>
+    <script src="style/ko.components.js"></script>
+    <script src="style/ko.require.js"></script>
+    <script src="style/kendo.culture.ru-RU.min.js"></script>
+    <script src="style/kendo.messages.ru-RU.js"></script>
+    <script>
+        kendo.culture('ru-RU');
+        //$.ajaxSetup({ cache: false });
+
+    </script>
+    <script src="style/globalize.js"></script>
+<script src="style/globalize.culture.ru-RU.js"></script>
+<script src="style/Globalize.Validation.js"></script>
+<script type="text/javascript">
+    $(function () {
+        Globalize.culture('ru-RU');
+    });
+</script>
+    <script>
+    var Lang = function () {
+        return {
+            //General
+            Template: 'Шаблон',
+            FIO: 'ФИО',
+            Choose: 'Выберите',
+            Description: 'Описание',
+            AdditionalInformation: 'Дополнительные данные',
+            Name: 'Наименование',
+            Code: 'Код',
+            ReceptionCode: 'Код приема',
+            Complaint: 'Жалоба',
+            DoctorFIO: 'ФИО врача',
+            Occupation: 'Специализация',
+            ReceptionDate: 'Дата приема',
+            CreateOrEdit: 'Создать или Редактировать',
+            Create: 'Создать',
+            Save: 'Сохранить',
+            Cancel: 'Отменить',
+            ChooseOccupation: 'Выберите специализацию',
+            Edit: 'Редактировать',
+            Delete: 'Удалить',
+            CancelSelected: 'Отменить выделение',
+            SelectOrAdd: 'Выбрать или добавить',
+            Clear: 'Очистить',
+            Search: 'Поиск',
+            PleaseSelect: 'Пожалуйста выберите',
+            ExportToWord:'Экспорт в Word документ',
+            //end
+            //folder receptionGrid begin
+            Prescribing: 'Назначения лекарственные',
+            Procedural: 'Назначения процедурные',
+            DrugName: 'Название препарата',
+            ReceptionMethod: 'Способ приема лекарства',
+            PrintRecept: 'Распечатать рецепт',
+            DesignatedResearch: 'Назначенные исследования',
+            UKT: 'Общий анализ крови (УКТ)',
+            UPT: 'Общий анализ мочи (УПТ)',
+            BT: 'Биохимический анализ крови',
+            KBT: 'Анализ кала (КБТ)',
+            EKG: 'ЭКГ',
+            FLU: 'Флюорография',
+            UZI: 'УЗИ',
+            OtherAnalysis: 'Другое исследование',
+            NamesOfOtherAnalysis: 'Наименование исследования',
+            GeneralInfo: 'Общая информация',
+            CardiologistForm: 'Форма кардиолога',
+            Appointment: 'Назначения',
+            EndocrinologistForm: 'Форма эндокринолога',
+            GynecologistForm: 'Шаблон',
+            LinersForm: 'Форма вкладыш для больного гриппом, ОРЗ, ангиной',
+            NeuropatologistForm: 'Форма невропатолога',
+            OculistForm: 'Форма окулиста',
+            OtolaryngologistForm: 'Форма отоларинголога',
+            Description: 'Дополнительные данные',
+            DiagnosticStep: 'Этап диагностики',
+            DiagnosisType: 'Тип диагноза',
+            ReceptionPlaceCode: 'Код места приёма',
+            TypeOfReception: 'Типы случаев обслуживания (приём)',
+            CheckUp: 'Обследование',
+            FromLimitation: 'Срок от',
+            ToLimitation: 'Срок до',
+            BLNumber: 'Б/л №',
+            ActiveVisiting: 'Активное посещение',
+            ReTurnout: 'Повторная явка',
+            RheumatologistForm: 'Форма ревматолога',
+            SurgeonForm: 'Форма хирурга',
+            TherapistForm: 'Форма терапевта',
+            ReceptionForm: 'Форма приёма',
+            UrologistForm: 'Форма уролога',
+            DisplayMode: 'Режим показа',
+            InOnePage: 'На одной странице',
+            Grouped: 'Сгруппированны',
+            Common: 'Общие',
+            //end
+            //EducationalnstitutionCardTreatment
+            DateObservation: 'Дата наблюдения',
+            Weight: 'Масса (кг)',
+            Growth: 'Рост (см)',
+            Allergy: 'Аллергия',
+            ClassGroup: 'Класс, Группа',
+            PhysicalDevelopment: 'Физические развитие',
+            FamilyHistoryDisease: 'Семейный анамнез (заболевания)',
+            ClassesOutSideSchool: 'Занятия вне школы (после)',
+            IsMusic: 'Музыка',
+            IsForeignLanguage: 'Иностранный язык',
+            OtherActivities: 'Другие занятия',
+            Recommendations: 'Рекомендации',
+            //end
+            //HistoryDevelopmentChildTreatment
+            RegistrationDateTheIns: 'Дата принятия на учет в данном учреждении',
+            IsDirectRegistration: 'Взять на учёт в этом учреждении',
+            WhenceCame: 'Откуда прибыл',
+            RemovalRegisterDate: 'Снятие с учёта',
+            ReasonForDeRegistration: 'Причина  снятия с учета (при переезде указать адрес выбытия)',
+            //end
+            //EducationalReception
+            DateInspection: 'Дата осмотра',
+            InformationInspection: 'Сведения об осмотре',
+            ReceptionDoctorOfEducationalInstition: 'Приём врача образовательного учреждения',
+            Complaints: 'Жалобы',
+            FromAbsen: 'Пропуск занятий  с',
+            From: 'c',
+            To: 'по',
+            Absenteeism: 'Пропуск  занятий по заболеванию',
+            Investigation: 'Исследования',
+            DateInspection: 'Дата осмотра',
+            ArterialPressure: 'Артериальное давление',
+            DiseaseDiagnose: 'Заболевание (диагноз)',
+            SpaTreatmentDiagnose: 'Санаторное лечение (диагноз)',
+            InjuryTransactionDiagnose: 'Травмы, Операции  (диагноз)',
+            DateInvestigation: 'Дата исследования',
+            InvestigationType: 'Тип исследования',
+            Result_Formula: 'Результат (Формула)',
+            //end
+            //CharacterFeed
+            FoodType: 'Вскармливание',
+            FromAge: 'С какого возраста',
+            ToAge: 'До какого возраста',
+            ReasonsForTransferMixed: 'Причины перевода на смешанное вскармливание',
+            ReasonsForTransferArtificial: 'Причины перевода на искусственное  вскармливание',
+            //end
+            //InformationAboutNewborn
+            MaternityHomeNumber: 'Номер роддома',
+            DateOfIssue: 'Дата выписки из роддома',
+            DateOfReceipt: 'Дата получения извещения o новорожденном',
+            Primary_medical_patronage: 'Первичный врачебный патронаж новорожденного',
+            DateOfVisit: 'Дата посещения',
+            ComplaintMother: 'Жалобы матери',
+            Character_feeding: 'Характер вскармливания',
+            GeneralStatusChild: 'Общее состояние ребёнка',
+            PhysiologicalReflexes: 'Физиологические рефлексы новорожденного',
+            MuscleTone: 'Тонус мышц',
+            BodyStructure: 'Строение тела',
+            Leather: 'Кожа',
+            Mucosal: 'Слизистые оболочки',
+            AppointmentsAandRecommendations: 'Назначения и рекомендации',
+            FoodStatus: 'Сотояние питания',
+            BoneStructure: 'Строение костей',
+            Breath: 'Дыхание',
+            CardioVascularSystem: 'Сердечно-сосудистая система',
+            Umbilical: 'Пупочная ранка',
+            Stomach: 'Живот',
+            Liver: 'Печень',
+            Spleen: 'Селезёнка',
+            Genitals: 'Половые органы',
+            Uritation: 'Мочеиспускание',
+            BabyCareRules: 'Уход за ребёнком, правила',
+            Conclusion: 'Заключение',
+            //end
+            //duringPregnancyGrid
+            GestationalAge: 'Срок беременности (неделя)',
+            GeneralCondition: 'Общее состояние',
+            AbdominalCircumference: 'Окружность живота (мм)',
+            HeightStandingUterus: 'Высота  дна матки (мм)',
+            BloodPressureRightHand: 'Артериальное давление: правая рука',
+            BloodPressureLeftHand: 'Артериальное давление: левая рука',
+            Pulse: 'Пульс',
+            PresentingPartOfFetus: 'Предлежащая часть плода',
+            PositionFetus: 'Положение, состояние плода',
+            FetalHeartbeat: 'Сердцебиение плода',
+            FetalMovements: 'Шевеление плода',
+            AmountsProteinInUrine: 'Количества белка в моче',
+            HemoglobinLevelOfBlood: 'Уровень гемоглобина в крови',
+            PathologicalChanges: 'Патологические изменения',
+            ReadingAndRecommendations: 'Показания, рекомендации',
+            Nextvisit: 'Следующий визит',
+            FirstInspectionOfPregencies: 'Первое обследование беременной',
+            DifferentPhysicalCharacteristics: 'особенности телосложения',
+            ConditionOfBreast: 'состояние молочной железы',
+            Vascular: 'сосудистой системы',
+            VaginaInspection: 'Влагалищное исследование',
+            Vagina: 'влагалище',
+            Cervix: 'шейка матки',
+            BodyOfUterus: 'тело матки',
+            OvariesAndTubes: 'яичники, трубы',
+            Features: 'особенности',
+            ExpectedDateOfChildbirth: 'предполагаемая дата родов',
+            Vulva: 'наружные половые органы',
+            //end
+            //Pregnancy
+            Prepare: 'Подготовка к родам',
+            PrepareType: 'Тип подготовки',
+            Date: 'Дата',
+            LastMenstrualFrom: 'Последняя менструация c',
+            LastMenstrualTo: 'Последняя менструация до',
+            FirstStirringOfFetus: 'Первое шевеление плода',
+            HealthOfHusband: 'Здоровье мужа',
+            WhichGenera: 'Роды (какие по счету)',
+            WhichPregnancy: 'Беременность каторая',
+            PregnancyResult: 'Чем завершилась беременность',
+            ExtragenitalDiseases: 'Экстрагенитальные заболевания',
+            BorneDiseases: 'Перенесенные заболевания',
+            GynecologicalDiseases: 'Гинекологические заболевания',
+            Toxoplasmosis: 'Обследование на токсоплазмоз',
+            SkinTest: 'Кожная проба',
+            PreviousPregnancyInfo: 'Информация о предыдущих беременностях',
+            PreviousPregnancyResult: 'Чем закончилась предыдущая беременность',
+            WhenWasPreviousPregnancy: 'Когда была предыдущая беременность',
+            Maternityleave: 'Отпуск по беременности',
+            InformationAboutPregnancyRelsut: 'Информация о результате беременности и о ребенке',
+            BornStatus: 'Ребёнок родился',
+            ParturitionType: 'Как завершилась беременность',
+            AbortionType: 'Чем закончилась беременность',
+            ClosedPregnancyDate: 'Дата родов',
+            MaternityHospitalNumber: '№ роддома',
+            WeightOfChild: 'Вес ребенка (кг)',
+            GrowthOfChild: 'Рост ребенка (см)',
+            ParticularGenera: 'Особенности родов',
+            Complications: 'Осложнения во время этой беременности',
+            SickLeaveNumber: 'Листок нетрудоспособности №',
+            PostDeliveryleave: 'Послеродовый отпуск',
+            PostDeliveryleaveDay: 'на (дней)',
+            //end
+            //Patient
+            LastName: 'Фамилия',
+            FirstName: 'Имя',
+            MiddleName: 'Отчество',
+            FullTemporaryAddress: 'Адрес прописки',
+            FullPermanentAddress: 'Место жительства',
+            WorkPlace: 'Место работы / учебы',
+            Gender: 'Пол',
+            PhoneHome: 'Тел. дом',
+            //end
+            //MedicalCard
+            AttachedToDispancery: 'Прикреплены для диспансеризации:',
+            AttachedToCurrentMedOffice: 'В данном учреждении',
+            AttachedToOtherMedOffice: 'В другом учреждении',
+            SignalMark: 'Cигнальные отметки',
+            GroupAndP_OwnershipOfBlood: 'Группа крови',
+            Rh: 'Р-принадлежность крови',
+            TypeOfReactions: 'Тип реакции',
+            BloodTransfusion: 'Переливание крови (когда, сколько)',
+            Vaccinations: 'Прививки (когда, какие)',
+            Reactions: 'Реакция',
+            SurgicalIntervention: 'Хирургические вмешательства',
+            DIABETES: 'Сахарный диабет',
+            InfectiousDiseases: 'Инфекционные заболевания',
+            FluorographyDate: 'Флюрография (дата)',
+            //end
+            //additional
+            ChooseContraceptionMethod: 'Выберите метод контрацепции',
+            ChooseCharacter: 'Выберите характеристику',
+            ChooseDispancaryType: 'Выберите вид диспансеризации',
+            ChooseFacilityCategory: 'Выберите льготную категорию',
+            FacilityCategoryGroup: 'Группа льготной категории',
+            ChoosefacilityCategoryGroup: 'Выберите группу',
+            SocialCategoryGroup: 'Группы социальных категорий',
+            ChooseSocialCategory: 'Выберите социальную категорию',
+            ChooseSocialGroup: 'Выберите социальную группу',
+            ChooseSportType: 'Выберите вид спорта',
+            //end
+            //Diagnose
+            ChooseDiagnose: 'Выберите диагноз',
+            IncludedData: 'Включенные данные',
+            ExcludedData: 'Исключенные данные',
+            //DirectionalHospital
+            DerectionNumber: 'Направления №',
+            LastDiagnose: 'Окончательный диагноз',
+            Institution: 'Учреждение',
+            HospitalTo: 'Направляется в стационар',
+            MedicalDocumentIssued: 'Медицинский документ выдан',
+            ToHand: 'на руки',
+            SendToEmail: 'направлен почтой',
+            HeadOfHospital: 'Руководитель учреждения',
+            DateIssuance: 'Дата заполнения',
+            OwnerFIO: 'Фамилия врача выдавшего направление',
+            //Drug
+            ChooseDrug: 'Выберите препарат',
+            InternationalName: 'Международное непатентованное название',
+            TradeNameEn: 'Торговое название (англ)',
+            TradeNameRu: 'Торговое название (рус)',
+
+            //humanOrgan
+            CopyForAllLocale: 'Копировать для остальных локализаций',
+            ParentId: 'Родительский элемент',
+            ControlType: 'Тип контроля',
+            Order: 'Порядок',
+            GetLastOrder: 'Автом.поставить посл. порядковый номер',
+            IsDoNotShowUnitInForm: 'Не показывать ед. изм. в форме',
+            IsIgnoreRender: 'Не показывать наименование в Word’е',
+            IsNewParagraph: 'Начинать с нового абзаца в Word’е',
+            ReceptionTypeStore: 'Включен для',
+            Append: 'Прибавлять',
+            Unit: 'Единицы измерения',
+            BeforeName: 'До наименования',
+            AfterName: 'После наименования',
+            //Password
+            NewPassword: 'Новый пароль',
+            ConfirmPassword: 'Подтверждение пароля',
+            SetPassword: 'Установить новый пароль',
+            //preventiveInspectionOfChildGrid
+            ChestCircumference: 'Окружность грудной клетки',
+            HeadCircumference: 'Окружность головы',
+            NutritionalStatus: 'Состояние питания',
+            PhysicalDevelopment: 'Физическое развитие',
+            PsychologicalDevelopment: 'Нервно-психическое развитие',
+            ConclusionOfLaboratoryExamination: 'Заключение лабораторного обследования',
+            //receptionCode
+            ChooseReceptionCode: 'Выберите код приема',
+            NatureDisease: 'Характер течения заболевания',
+            //StatCoupon
+            InjuryOrPoisoningTypeId: 'Вид травм  и отравлений',
+            ReceptionCodePatient: 'Код случая обращения пациента',
+            FirstDiagnose: 'Первичный диагноз',
+            PlotNumber: 'Участок №',
+            Diagnose: 'Диагноз',
+            TheDiagnoseIsFirstTime: 'Выставляется впервые в жизни',
+            
+        }
+    }();
+</script>
+    <script src="style/select2.js"></script>
+    <script src="style/kendo.timezones.min.js"></script>
+
+    
+    <script src="style/jQuery.print.js"></script>
+    <script>
+        var wnd, detailsTemplate;
+        var oldSearchValue = '';
+        $(document).ready(function () {
+            var crudServiceBaseUrl = "/api/ru-RU/Cashbox/PatientRoadMap/GetForGrid",
+                dataSource = new kendo.data.DataSource({
+                    type: "api",
+                    transport: {
+                        read: {
+                            url: crudServiceBaseUrl,
+                            dataType: "json",
+                            contentType: "application/json",
+                            type: "GET"
+                        },
+                    },
+                    pageSize: 10,
+                    serverPaging: true,
+                    serverFiltering: true,
+                    schema: {
+                        data: function (data) {
+                            return data.Data;
+                        },
+                        total: function (data) {
+                            return data.Total;
+                        },
+                    }
+                });
+
+            $("#grid").kendoGrid({
+                dataSource: dataSource,
+                navigatable: false,
+
+                //pageable: {
+                //    numeric: true,
+                //    input: true,
+                //    pageSizes: [10, 15, 30, 50, 100],
+                //},
+                filterable: false,
+                selectable: true,
+                autoBind: true,
+                columns: [
+                    { field: "Id", title: "Id", width: 100, hidden: true },
+                    { field: "_DateOfIssue", title: 'Дата выдачи', template: '#= kendo.toString(new Date(_DateOfIssue),"MM-dd-yyyy (hh:mm)") #', width: 160 },
+                         { field: "PatientRoadMapNumber", title: '№ маршрутной карты', width: 150 },
+                          { field: "FullName", title: "ФИО пациента", width: 300 },
+                            { field: "TotalCurrentPrice", title: 'Сумма к оплате', template: '#= kendo.toString(TotalCurrentPrice,"n1") # сум', width: 160 },
+                               { field: "_DebtAmount", title: 'Долг', template: '#= kendo.toString(PaymentIsMade?_DebtAmount:0,"n1") # сум', width: 160 },
+                          { field: "PaymentIsMade", title: "Оплата", template: '#= PaymentIsMade?"активировано":"не активировано" #' },
+
+                ],
+                dataBound: function (e) {
+
+                },
+                change: function (e) {
+                    var selectedRows = this.select();
+                    var dataItem = this.dataItem(selectedRows[0]);
+                    window.vm.SetModel(dataItem)
+                }
+
+
+            });
+            wnd = $("#details")
+                      .kendoWindow({
+                          title: "Маршрутная карта",
+                          modal: true,
+                          visible: false,
+                          resizable: false,
+                          width: "auto"
+                      }).data("kendoWindow");
+            detailsTemplate = kendo.template($("#template").html());
+            $("#searchPatient").click(function () {
+                var currentSearchValue = $('#search_input').val();
+                var dataSource = $("#grid").data("kendoGrid").dataSource;
+                var filters = dataSource.filter();
+                dataSource.read({ Term: currentSearchValue })
+                vm.SetModel();
+            });
+            var InvoiceRow = function (invoiceRow, debtAmount) {
+                var _ = this;
+                _.Balance = invoiceRow.Balance;
+                _.DebtAmount = ko.observable(debtAmount);
+                _.FactAmount = ko.observable(debtAmount);
+                _.Id = invoiceRow.Id;
+
+
+
+            };
+            var PaymentModel = function (item) {
+                var _ = this;
+                if (item == null || typeof item === 'undefined') {
+                    item = {
+                        Id: 0,
+                        TotalCurrentPrice: 0,
+                        PaymentIsMade: true,
+                        PaymentType: '',
+                        _PaymentByCard: 0,
+                        _PaymentCash: 0,
+                        _DebtAmount: 0,
+                        InvoicePayment: 0,
+                        PatientRoadMapNumber: '',
+                        CashierFullName: '',
+                        PatientId: 0,
+                        PaymentDate: new Date(),
+                        PatientRoadMapProvidedMedServices: [],
+                        _DebtPayments: []
+                    };
+                }
+                _.PatientRoadMapId = item.Id;
+                _.TotalCurrentPrice = item.TotalCurrentPrice;
+                _.PatientId = item.PatientId;
+                _.PaymentType = ko.observable(item.PaymentType || '');
+                _.PaymentByCard = ko.observable(item._PaymentByCard);
+                _.PaymentCash = ko.observable(item._PaymentCash);
+                _.PaymentIsMade = ko.observable(item.PaymentIsMade);
+                _.PatientRoadMapNumber = item.PatientRoadMapNumber;
+                _.PatientRoadMapProvidedMedServices = item.PatientRoadMapProvidedMedServices;
+                _.DebtPayments = item._DebtPayments;
+                _.PaymentDate = item._PaymentDate;
+                _.CashierFullName = item.CashierFullName;
+                _.DebtAmount = ko.observable(item._DebtAmount);
+                _.InvoicePayment = ko.observable(item.InvoicePayment);
+                _.TotalPayment = ko.computed(function () {
+                    return _.PaymentCash() + _.PaymentByCard() + _.InvoicePayment();
+                });
+                _.TotalPayment.subscribe(function (value) {
+                    _.DebtAmount(_.TotalCurrentPrice - value);
+                });
+                _.PaymentByCard.subscribe(function (value) {
+                    if (value && _.PaymentType() == 3) {
+                        _.PaymentCash(_.TotalCurrentPrice - value);
+                    }
+                });
+
+                _.PaymentType.subscribe(function (value) {
+                    if (value && !_.PaymentIsMade()) {
+
+                        switch (value) {
+                            case '1':
+                                _.PaymentByCard(0);
+                                _.PaymentCash(_.TotalCurrentPrice);
+                                break;
+                            case '2':
+                                _.PaymentByCard(_.TotalCurrentPrice);
+                                _.PaymentCash(0);
+                                break;
+                            default:
+                                _.PaymentByCard(0);
+                                _.PaymentCash(_.TotalCurrentPrice);
+                                break;
+
+                        }
+                    }
+                });
+            };
+            var DebtPaymentModel = function (item) {
+                var _ = this;
+                _.PaymentByCard = ko.observable(0);
+                _.PaymentCash = ko.observable(0);
+                _.DebtAmount = 0;
+                if (item) {
+
+                    _.DebtAmount = item._DebtAmount;
+                    _.PatientRoadMapId = item.Id;
+                    _.PaymentType = 1;
+                }
+
+            };
+            var PatientRoadMapModel = function () {
+                var _ = this;
+                _.PrintTicket = function () {
+                    $("#printchek").removeClass("hide");
+                    $("#printchek").print();
+                    $("#printchek").addClass("hide");
+                };
+                _.Model = ko.observable(new PaymentModel());
+                _.DebtPaymentModel = ko.observable();
+                _.InvoiceModel = ko.observable();
+                _.IsBusy = ko.observable(false);
+                _.SetModel = function (item) {
+                    _.Model(new PaymentModel(item));
+                    _.DebtPaymentModel(new DebtPaymentModel(item));
+                    getAllBalance();
+                }
+                _.OnOpenWindow = function (e) {
+                    e.sender.center();
+                }
+
+                _.IsEditMode = ko.observable(false);
+                _.Errors = ko.observableArray([]);
+                _.CanPayment = ko.computed(function () {
+                    if (_.Model().PaymentIsMade() || !_.Model().PaymentType() > 0 || (_.Model().TotalPayment() + _.Model().DebtAmount() != _.Model().TotalCurrentPrice))
+                        false;
+                    else {
+                        return true;
+                    }
+
+                });
+                _.Message = ko.observable('');
+                _.DoPayment = function () {
+                    var data = ko.toJSON(_.Model());
+                    $.ajax({
+                        url: "/api/ru-RU/Cashbox/PatientRoadMap/",
+                        type: "PUT",
+                        dataType: "json",
+                        contentType: "application/json",
+                        data: data,
+                        beforeSend: function () {
+                            _.IsBusy(true);
+                            _.Message('');
+                            _.Errors([]);
+                        },
+                        success: function (data) {
+                            if (data.success) {
+
+                                //$("#searchPatient").trigger("click");
+                                _.Message('Оплата прошла успешно!');
+                                setTimeout(function () {
+                                    _.Message('');
+                                }, 3000);
+                                _.SetModel(data.Item);
+
+                            }
+
+                            else {
+                                _.Errors([]);
+                                _.Errors([data.Errors]);
+                            }
+
+                        },
+                        complete: function () { _.IsBusy(false); }
+                    });
+                };
+                _.DoDebtPayment = function () {
+                    var data = ko.toJSON(_.DebtPaymentModel());
+                    $.ajax({
+                        url: "/api/ru-RU/Cashbox/PatientRoadMap/",
+                        type: "PUT",
+                        dataType: "json",
+                        contentType: "application/json",
+                        data: data,
+                        beforeSend: function () {
+                            _.IsBusy(true);
+                            _.Message('');
+                            _.Errors([]);
+                        },
+                        success: function (data) {
+                            if (data.success) {
+
+                                _.Message('Оплата прошла успешно!');
+                                setTimeout(function () {
+                                    _.Message('');
+                                }, 3000);
+                                _.SetModel(data.Item);
+                            }
+
+                            else {
+                                _.Errors([]);
+                                _.Errors([data.Errors]);
+                            }
+
+                        },
+                        complete: function () { _.IsBusy(false); }
+                    });
+                };
+                //DataSource InvoiceRows
+                var _crudServiceBaseUrl = "/api/ru-RU/Cashbox/InvoiceRow";
+                function rowDataSource(filter) {
+                    return new kendo.data.DataSource({
+                        type: "api",
+                        transport: {
+                            read: {
+                                url: _crudServiceBaseUrl,
+                                dataType: "json",
+                                contentType: "application/json",
+                                type: "GET"
+
+                            },
+                            parameterMap: function (data, operation) {
+
+                                return kendo.stringify(data);
+                            }
+                        },
+                        pageSize: 15,
+                        serverPaging: true,
+                        serverFiltering: true,
+
+                        schema: {
+                            data: function (data) {
+                                return data.Data;
+                            },
+                            total: function (data) {
+                                return data.Total;
+                            },
+                            model: {
+                                id: "Id",
+                                fields: {
+                                    Id: { editable: false, nullable: false, defaultValue: 0 },
+                                    Amount: { type: "number" },
+                                    AmountNative: { type: "number", editable: false },
+                                    PremiumForPrice: { type: "number" },
+                                    DiscountForPrice: { type: "number" },
+                                    CurrenceKurs: { type: "number", defaultValue: 1 },
+                                    CurrenceType: { type: "number" },
+                                    BeginDate: { type: "date" },
+                                    EndDate: { type: "date" },
+                                    PaymentType: {
+                                        type: "number", validation: { required: true }, defaultValue: 1
+                                    },
+
+                                }
+                            }
+                        },
+                        filter: filter
+                    });
+
+                }
+
+                //InvoiceRows
+
+                function detailInit(e) {
+
+                    var detailRow = e.detailRow;
+                    detailRow.find("#invoiceRows").kendoGrid({
+                        dataSource: rowDataSource({ field: "InvoiceId", operator: "eq", value: e.data.Id }),
+                        scrollable: false,
+                        sortable: true,
+                        pageable: true,
+                        editable: false,
+                        selectable: true,
+                        save: function (ev) {
+
+                            if (ev.model.isNew()) {
+                                ev.model.InvoiceId = e.data.Id;
+                            }
+
+
+                        },
+                        change: function (e) {
+                            var grid = e.sender;
+                            var selectedRow = grid.select();
+                            var dataItem = grid.dataItem(selectedRow);
+                            _.InvoiceModel(new InvoiceRow(dataItem, _.Model().DebtAmount()));
+                        },
+                        columns: [
+
+                          { field: "PaymentType", title: "Тип оплата", values: Application.manualGetByName("PaymentTypeEnum") },
+                          { field: "BeginDate", title: "Дата начала", template: "#=kendo.toString(BeginDate,'d')#" },
+                          { field: "EndDate", title: "Дата окончания", template: "#=kendo.toString(EndDate,'d')#" },
+                          { field: "CurrenceType", title: "Валюта", values: Application.manualGetByName("CurrenceEnum") },
+                          { field: "CurrenceKurs", title: "Курс" },
+                          { field: "Amount", title: "Вносимая сумма", template: "#=kendo.toString(Amount,'n2')#" },
+                          { field: "AmountNative", title: "Сумма пополнения", template: "#=kendo.toString(AmountNative,'n2')#" },
+                              { field: "Balance", title: "Баланс", template: "#=kendo.toString(Balance,'n2')#" },
+                          { field: "PremiumForPrice", title: "Надбавка для прайс-листа (%)", template: "#=kendo.toString(PremiumForPrice,'n2')#" },
+                          { field: "DiscountForPrice", title: "Скидка для прайс-листа (%) ", template: "#=kendo.toString(DiscountForPrice,'n2')#" },
+                        ]
+                    });
+                }
+
+                var crudServiceBaseUrl = "/api/ru-RU/Cashbox/Invoice";
+                var invoiceDataSource = Application.dataSource(crudServiceBaseUrl, {
+                    id: "Id",
+                    fields: {
+                        Id: { editable: false, nullable: false, defaultValue: 0 },
+                        Description: {},
+                        Number: {},
+                        PatientId: { type: "number" },
+                        InvoiceType: {
+                            type: "number", validation: { required: true }
+                        },
+
+                    }
+                });
+                var ingrid = $("#invoicegrid").kendoGrid({
+                    groupable: false,
+                    dataSource: invoiceDataSource,
+                    pageable: {
+                        numeric: true,
+                        input: true,
+                        pageSizes: [15, 30, 50, 100],
+                    },
+                    editable: false,
+
+                    columns: [
+
+                          { field: "Number", title: "№ (карта страховка, договор)", groupable: true },
+                        { field: "Description", title: "Описание", groupable: false, },
+
+                         { field: "InvoiceType", title: "Тип счетов", values: Application.manualGetByName("InvoiceTypeEnum"), groupable: false },
+                          { field: "LastName", title: "Владелец счета", template: "#= LastName+' '+ FirstName#" },
+
+                    ],
+                    detailTemplate: kendo.template($("#invoice_template").html()),
+                    detailInit: detailInit,
+                    dataBound: function (e) {
+                        this.expandRow(this.tbody.find("tr.k-master-row").first());
+                    },
+
+                });
+                _.PaymentFromInvoice = function () {
+                    var grid = $("#invoicegrid").data("kendoGrid");
+                    //  console.log(grid.dataSource);
+                    grid.dataSource.filter({ field: "PatientId", operator: "eq", value: _.Model().PatientId });
+
+                    _.IsEditMode(true);
+
+                };
+
+                _.CloseInvoceWindow = function () {
+                    _.IsEditMode(false);
+                }
+                //DataSource url
+
+                //Grid
+                //{ field: "PatientId", operator: "eq", value: _.Model().PatientId }
+                _.TryPaymentFromInvoice = function () {
+                    _.Message('');
+                    $.ajax({
+                        url: '/api/ru-RU/Cashbox/PaymentFromInvoice/Get',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {
+                            patientRoadMapId: _.Model().PatientRoadMapId,
+                            invoiceRowId: _.InvoiceModel().Id,
+                            amount: _.InvoiceModel().FactAmount
+                        },
+                        success: function (data) {
+                            window.vm.SetModel(data);
+                            _.IsEditMode(false);
+                            _.Message('Оплата прошла успешно!');
+                        },
+                        error: function (err) {
+                            _.Message(err.responseJSON);
+                        }
+
+
+                    });
+                };
+
+
+                function getAllBalance() {
+                    $.ajax({
+                        url: '/api/ru-RU/Invoice/GetPatientBalance',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { patientId: _.Model().PatientId },
+                        success: function (data) {
+                            $("#invoiceBalance").html(kendo.format("{0:n} сум", data));
+                        }
+                    });
+                }
+
+            }
+
+            window.vm = new PatientRoadMapModel();
+            ko.require(['apiDataSource', 'pager', 'select2Manual'], function () {
+                ko.applyBindings(vm, document.getElementById('koZone'));
+            });
+
+        });
+        function showDetails(e) {
+            e.preventDefault();
+            var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+            wnd.content(detailsTemplate(dataItem));
+            wnd.center().open();
+        }
+
+        function searchKeyPress(e) {
+            var currentSearchValue = $('#search_input').val();
+
+            if (typeof e == 'undefined' && window.event) { e = window.event; }
+            //&& oldSearchValue != currentSearchValue
+            if (e.keyCode == 13) {
+                $("#searchPatient").trigger("click");
+                oldSearchValue = currentSearchValue;
+            }
+            if ((e.keyCode == 8 || e.keyCode == 46) && currentSearchValue.length == 1) {
+
+                // $('#Patients').data('tGrid').ajaxRequest({ "searchText": '' });
+            }
+        }
+    </script>
+    <script type="text/x-kendo-template" id="template">
+        <div id="koZone">
+            <div class="text-center">
+                <h2>Маршрутная карта пациента  № <span style="text-decoration:underline">#= PatientRoadMapNumber#</span></h2>
+                <p>#= kendo.toString(new Date(_DateOfIssue), "MM/dd/yyyy") #</p>
+                <p class="text-muted" style="font-size:12px; font-style:italic; margin-top:-14px">дата выдачи маршрутной карты </p>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <tbody>
+                        <tr>
+                            <th class="text-right" width="250">Ф.И.О. </th>
+                            <td>#= FullName #</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Дата рождения </th>
+                            <td>#= kendo.toString(new Date(DayOfBirth), "MM/dd/yyyy") #</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Сумма к оплате </th>
+                            <td>#= kendo.toString(TotalCurrentPrice,"n1") # сум</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div data-bind="text:SelectedId">
+
+            </div>
+        </div>
+    </script>
+    <script type="text/x-kendo-template" id="invoice_template">
+        <div id="invoiceRows"></div>
+    </script>
+
+
+
+
+
+<div class="k-widget k-window" data-role="draggable" style="padding-top: 38px; min-width: 90px; min-height: 50px; display: none; top: 1429.19px; left: 14.9916px;"><div class="k-window-titlebar k-header" style="margin-top: -38px;">&nbsp;<span class="k-window-title" id="details_wnd_title" style="right: 31px;">Маршрутная карта</span><div class="k-window-actions"><a role="button" href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" class="k-window-action k-link"><span role="presentation" class="k-icon k-i-close">Close</span></a></div></div><div id="details" data-role="window" class="k-window-content k-content" tabindex="0" role="dialog" aria-labelledby="details_wnd_title">
+</div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="position: absolute; height: auto; display: none;"><ul unselectable="on" class="k-list k-reset" tabindex="-1" role="listbox" aria-hidden="true" aria-live="off" style="overflow: auto;"><li tabindex="-1" role="option" unselectable="on" class="k-item k-state-selected k-state-focused">15</li><li tabindex="-1" role="option" unselectable="on" class="k-item">30</li><li tabindex="-1" role="option" unselectable="on" class="k-item">50</li><li tabindex="-1" role="option" unselectable="on" class="k-item">100</li></ul></div><script id="ko-pager" type="text/html"><ul class="pagination pull-left success">
+    <!-- ko if:CurrentPage() === 1 -->
+    <li class="disabled">
+        <a href="#" class="disabledPage">&laquo;&laquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko ifnot:CurrentPage() === 1 -->
+    <li>
+        <a href="#" data-bind="click: function () { CurrentPage(1); }">&laquo;&laquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko if:HasPrevPage -->
+    <li>
+        <a href="#" data-bind="click: function () { CurrentPage(CurrentPage() - 1); }">&laquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko ifnot:HasPrevPage -->
+    <li class="disabled">
+        <a href="#" class="disabledPage">&laquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko foreach:Pages -->
+    <!-- ko if:$data === $parent.CurrentPage() -->
+    <li class="active">
+        <span class="currentPage" data-bind="text: $data"></span>
+    </li>
+    <!-- /ko -->
+    <!-- ko if:$data !== $parent.CurrentPage() -->
+    <li>
+        <a href="#" data-bind="text: $data, click: function () { $parent.CurrentPage($data); }"></a>
+    </li>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if:HasNextPage -->
+    <li>
+        <a href="#" data-bind="click: function () { CurrentPage(CurrentPage() + 1); }">&raquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko ifnot:HasNextPage -->
+    <li class="disabled">
+        <a href="#" class="disabledPage">&raquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko ifnot:CurrentPage() === LastPage() -->
+    <li>
+        <a href="#" data-bind="click: function () { CurrentPage(LastPage()); }">&raquo;&raquo;</a>
+    </li>
+    <!-- /ko -->
+    <!-- ko if:CurrentPage() === LastPage() -->
+    <li class="disabled">
+        <a href="#" class="disabledPage">&raquo;&raquo;</a>
+    </li>
+    <!-- /ko -->
+</ul>
+<div class="pull-right" style="margin: 20px 0;">
+    <span data-bind="text: FirstItemIndex"></span>
+    -
+    <span data-bind="text: LastItemIndex"></span>
+    из
+    <strong>
+        <span data-bind="text: TotalItemCount"></span>
+    </strong>
+    записей.
+</div></script><script id="ko-select2Manual" type="text/html"><input class="form-control" data-bind="value: Value, select2: Source()" />
+</script><div class="k-widget k-window" data-role="draggable" style="padding-top: 38px; min-width: 90px; min-height: 50px; width: 100%; display: none; top: 270.434px; left: 14.9916px;"><div class="k-window-titlebar k-header" style="margin-top: -38px;">&nbsp;<span class="k-window-title" style="right: 49px;">счетов пациентов</span><div class="k-window-actions"><a role="button" href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" class="k-window-action k-link"><span role="presentation" class="k-icon k-i-maximize">Maximize</span></a><a role="button" href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" class="k-window-action k-link"><span role="presentation" class="k-icon k-i-close">Close</span></a></div></div><div data-bind="kendoWindow: {  isOpen : IsEditMode, visible: false, actions: [&#39;Maximize&#39;, &#39;Close&#39;], modal: true, title: &#39;счетов пациентов&#39;, open: OnOpenWindow, width: &#39;100%&#39;  }" data-role="window" class="k-window-content k-content" tabindex="0">
+                <div style="padding: 0 38px;">
+                    <div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <div id="invoicegrid" data-role="grid" class="k-grid k-widget"><div class="k-grid-header" style="padding-right: 26px;"><div class="k-grid-header-wrap"><table role="grid"><colgroup><col class="k-hierarchy-col"><col><col><col><col></colgroup><thead role="rowgroup"><tr role="row"><th class="k-hierarchy-cell k-header">&nbsp;</th><th role="columnheader" data-field="Number" data-title="№ (карта страховка, договор)" data-groupable="true" class="k-header">№ (карта страховка, договор)</th><th role="columnheader" data-field="Description" data-title="Описание" data-groupable="false" class="k-header">Описание</th><th role="columnheader" data-field="InvoiceType" data-title="Тип счетов" data-groupable="false" class="k-header">Тип счетов</th><th role="columnheader" data-field="LastName" data-title="Владелец счета" class="k-header">Владелец счета</th></tr></thead></table></div></div><div class="k-grid-content"><table role="treegrid"><colgroup><col class="k-hierarchy-col"><col><col><col><col></colgroup><tbody role="rowgroup"></tbody></table><div class="k-grid-content-expander" style="width: 506px;"></div></div><div class="k-pager-wrap k-grid-pager k-widget" data-role="pager"><a href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" title="Вернуться на первую страницу" class="k-link k-pager-nav k-pager-first k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-w">Вернуться на первую страницу</span></a><a href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" title="Перейти на предыдущую страницу" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-w">Перейти на предыдущую страницу</span></a><ul class="k-pager-numbers k-reset"><li><span class="k-state-selected">0</span></li></ul><span class="k-pager-input k-label">Страница<input class="k-textbox k-state-disabled" disabled="disabled">из 0</span><a href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" title="Перейдите на следующую страницу" class="k-link k-pager-nav  k-state-disabled" data-page="0" tabindex="-1"><span class="k-icon k-i-arrow-e">Перейдите на следующую страницу</span></a><a href="http://meddatademo.bepro.uz/ru-RU/Cashbox/Payment#" title="К последней странице" class="k-link k-pager-nav k-pager-last k-state-disabled" data-page="0" tabindex="-1"><span class="k-icon k-i-seek-e">К последней странице</span></a><span class="k-pager-sizes k-label"><span class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">10</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select data-role="dropdownlist" style="display: none;"><option value="15" selected="selected">15</option><option value="30">30</option><option value="50">50</option><option value="100">100</option></select></span>элементов на странице</span><span class="k-pager-info k-label">Нет записей для отображения</span></div></div>
+                            </div>
+                        </div>
+                        <div class="form-horizontal">
+                            <div data-bind="with:InvoiceModel" class="well"></div>
+                            <div class="form-group">
+
+                                <div class="col-sm-12">
+
+                                    <div class="pull-right">
+
+                                        <button type="button" class="btn btn-default" data-bind="click: $root.CloseInvoceWindow">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><div class="k-resize-handle k-resize-n"></div><div class="k-resize-handle k-resize-e"></div><div class="k-resize-handle k-resize-s"></div><div class="k-resize-handle k-resize-w"></div><div class="k-resize-handle k-resize-se"></div><div class="k-resize-handle k-resize-sw"></div><div class="k-resize-handle k-resize-ne"></div><div class="k-resize-handle k-resize-nw"></div></div><span role="status" aria-live="polite" class="select2-hidden-accessible">наличные</span><div id="select2-drop-mask" class="select2-drop-mask" style="display: none;"></div><div class="select2-drop select2-display-none select2-with-searchbox select2-drop-active" style="left: 194.139px; width: 458px; top: 265.011px; bottom: auto; display: none;">   <div class="select2-search">       <label for="s2id_autogen6_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-6" id="s2id_autogen6_search" placeholder="" aria-activedescendant="select2-result-label-7">   </div>   <ul class="select2-results" role="listbox" id="select2-results-6"></ul></div></body></html>

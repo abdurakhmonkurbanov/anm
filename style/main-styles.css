@@ -1,0 +1,140 @@
+﻿/*color-1 #2C9585*/
+/*color-2 #41C6B2*/
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.dell{
+	cursor:pointer; 
+	font:bold;
+}
+body {
+    color: #333;
+    font-size: 16px;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.account-body {
+    background-color: #34ad9b;
+    
+}
+.account-body, .login-cover-bg, .login-cover-image {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+.login-cover-image img {
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+   text-align:center;
+   right:0;
+   bottom:0;
+}
+.login-cover-bg {
+    background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center , #35A291 0px, #000 100%) repeat scroll 0 0;
+    opacity: 0.6;
+}
+/*a {
+    color: #007cca;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+    a:link, a:visited,
+    a:active, a:hover {
+        color: #2c9585;
+    }
+
+  a.k-primary:link {
+    color: white;
+}*/
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: Segoe UI light;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5, h6 {
+    font-size: 14px;
+}
+
+    h5 a:link, h5 a:visited, h5 a:active {
+        padding: 0;
+        text-decoration: none;
+    }
+
+label {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Segoe UI;
+    color: #333;
+}
+
+.label-w {
+    color: white;
+}
+
+.as-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+    .as-disabled > .footer {
+        cursor: not-allowed;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+        .as-disabled > .footer > li > a {
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.6;
+        }
+
+.well > .chart-well-title {
+    background-color: #2C9585 !important;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 2px;
+}
+
+.well > .chart-well-date {
+    color: #2C9585 !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: right;
+    font-size:14px;
+    font-weight:700;
+     padding-top: 5px;
+}

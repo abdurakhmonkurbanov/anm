@@ -1,0 +1,10 @@
+﻿/*.k-edit-form-container {
+    width: 100%;
+}
+
+.k-edit-field .k-widget {
+    width: 100%;
+}*/
+.k-loading-image {
+    background-image: url("/Content/images/ajax-loader.gif");
+}

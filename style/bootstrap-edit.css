@@ -1,0 +1,331 @@
+﻿
+/*buttons*/
+.btn {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-image: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.btn-success {
+    background-color: #2c9585;
+}
+
+    .btn-success:hover,
+    .btn-success:active, .btn-success:focus {
+        background-color: #35a291;
+        border-color: transparent;
+    }
+/*buttons*/
+
+
+/*form-control*/
+.form-control {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border-color: #2c9585;
+    height: auto;
+}
+
+    .form-control:focus {
+        border-color: #2c9585;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /*custom-form-control*/
+
+
+    .form-control.bottom-line, .bottom-line-form .form-control {
+        border: 1px solid transparent;
+        border-bottom: 1px solid rgba(44, 133, 133, 0.3);
+        box-shadow: none;
+    }
+
+        .form-control.bottom-line:hover,
+        .form-control.bottom-line:focus,
+        .bottom-line-form .form-control:hover,
+        .bottom-line-form .form-control:focus {
+            border: 1px solid #2c8585;
+        }
+
+
+/*custom-form-control*/
+
+/*bottom-line-group*/
+.input-group.bottom-line-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group.input-group.bottom-line-group > .form-control {
+    width: 100%;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(44, 133, 133, 0.3);
+    box-shadow: none;
+}
+
+.input-group.bottom-line-group > .input-group-btn > .btn-remove {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #2c9585;
+    border-top: 1px solid #2c9585;
+}
+
+.input-group.bottom-line-group > .input-group-btn {
+    display: none;
+}
+
+.input-group.bottom-line-group:hover > .form-control {
+    border:1px solid #2c9585;
+    border-right: none;
+}
+
+.input-group.bottom-line-group:hover > .input-group-btn {
+    display: table-cell;
+}
+
+/*bottom-line-group*/
+
+/*select-bottom-line*/
+.select-container {
+    overflow-x: hidden;
+    position: relative;
+}
+
+    .select-container > select.form-control.bottom-line {
+        width: 120%;
+    }
+
+        .select-container > select.form-control.bottom-line:hover,
+        .select-container > select.form-control.bottom-line:focus,
+        .select-container > select.form-control.bottom-line:active {
+            width: 99.9%;
+        }
+/*select-bottom-line*/
+
+/*form-control*/
+
+
+/*navbar-inverse*/
+.navbar-default {
+    background-image: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    background-color: #2c9585;
+    border: none;
+    margin-bottom: 0;
+    z-index: 2;
+}
+
+.navbar-brand {
+    width: 240px;
+    height: 60px;
+    display: block;
+    position: relative;
+    padding: 0; 
+    background-color: #2c9585 !important;
+    color: white !important;
+    text-decoration: none;
+    -webkit-text-shadow: none;
+    -ms-text-shadow: none;
+    text-shadow: none;
+    text-align: center;
+    font-family: Lucida Handwriting Italic;
+    font-size: 28px;
+}
+
+.navbar-brand > img {
+    height: 100%;
+    width: auto;
+
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none !important;
+}
+
+.nav.navbar-nav > li.active > a,
+.nav.navbar-nav > li.active > a:hover {
+    background-color: #35a291;
+    background-image: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+}
+
+.nav.navbar-nav > li > a {
+    color: white;
+    font-size: 14px;
+    font-family: Segoe UI;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #35a291;
+}
+
+.nav.navbar-nav > li > a:hover,
+.nav.navbar-nav > li > a:focus,
+.nav.navbar-nav > li > a:active,
+.nav.navbar-nav > li > a.active {
+    background-color: #35a291 !important;
+    color: white;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus,
+.navbar-toggle:active,
+.navbar-toggle {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: 13px;
+    border-color: #35a291 !important;
+    background-color: #35a291 !important;
+}
+
+    .navbar-toggle > .icon-bar {
+        background-color: white !important;
+    }
+
+@media (max-width: 767px) {
+    .navbar-default {
+        padding-right: 0;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+            color: #fff !important;
+        }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > .divider {
+            background-color: #35a291 !important;
+        }
+}
+/*navbar-inverse*/
+
+
+/*dropdown*/
+.dropdown-menu {
+    padding: 0;
+}
+
+    .dropdown-menu > li > a {
+        display: block;
+        padding: 15px;
+        color: #333;
+    }
+
+        .dropdown-menu > li > a:hover {
+            color: #fff;
+            background-color: #35a291;
+            background-image: none;
+        }
+/*dropdown*/
+
+
+/*table*/
+.table > thead > tr > th {
+    font-family: Segoe UI Semibold;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    vertical-align: middle;
+}
+/*table*/
+
+
+/*tab*/
+.nav-tabs {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #2c9585;
+}
+
+    .nav-tabs > li > a {
+        margin: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        color: #555;
+    }
+
+        .nav-tabs > li > a:hover {
+            background-color: rgba(53, 162, 145,0.7);
+            border-color: rgba(53, 162, 145,0.7);
+            color: white;
+        }
+
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+        color: #555;
+        cursor: default;
+        background-color: #fff;
+        border: 1px solid #2c9585;
+        border-bottom-color: transparent;
+    }
+/*tab*/
+
+
+/*collapse*/
+.panel {
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border-color: #2c9585 !important;
+}
+
+.panel-heading {
+    padding: 15px 10px;
+    border-bottom: 1px solid transparent;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #35a291 !important;
+    background-image: none !important;
+    position: relative;
+}
+
+    .panel-heading > i.fa.fa-spin {
+        top: 12px;
+        right: 10px;
+        display: block;
+    }
+
+.panel-title {
+    font-size: 18px;
+}
+
+    .panel-title > a {
+        text-decoration: none;
+        color: white !important;
+    }
+/*collapse*/
+
+
+/* 02.10.14 */
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #fff;
+}
+
+/* end 02.10.14 */

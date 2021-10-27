@@ -1,0 +1,126 @@
+﻿/* file input */
+
+
+input[type="file"] {
+  display: block;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.btn-file > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-size: 23px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  direction: ltr;
+}
+
+input[type="file"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.fileinput {
+  display: inline-block !important; 
+  margin-bottom: 9px !important;
+}
+
+.fileinput .uneditable-input {
+  display: inline-block !important;
+  margin-bottom: 0 !important;
+  vertical-align: middle !important;
+  cursor: text !important;
+}
+
+.fileinput .thumbnail {
+  display: inline-block !important;
+  margin-bottom: 5px !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.fileinput .thumbnail > img {
+  max-height: 100% !important;
+}
+
+.fileinput .btn {
+  vertical-align: middle !important;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+  display: none !important;
+}
+
+.fileinput-inline .fileinput-controls {
+  display: inline !important;
+}
+
+.fileinput .uneditable-input {
+  white-space: normal !important;
+}
+
+.fileinput-new .input-group .btn-file {
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.fileinput-new .input-group .btn-file.btn-xs,
+.fileinput-new .input-group .btn-file.btn-sm {
+  border-radius: 0 3px 3px 0 !important;
+}
+
+.fileinput-new .input-group .btn-file.btn-lg {
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.form-group.has-warning .fileinput .uneditable-input {
+  color: #c09853 !important;
+  border-color: #faebcc !important;
+}
+
+.form-group.has-warning .fileinput .fileinput-preview {
+  color: #c09853 !important;
+}
+
+.form-group.has-warning .fileinput .thumbnail {
+  border-color: #faebcc !important;
+}
+
+.form-group.has-error .fileinput .uneditable-input {
+  color: #b94a48 !important;
+  border-color: #ebccd1 !important;
+}
+
+.form-group.has-error .fileinput .fileinput-preview {
+  color: #b94a48 !important;
+}
+
+.form-group.has-error .fileinput .thumbnail {
+  border-color: #ebccd1 !important;
+}
+
+.form-group.has-success .fileinput .uneditable-input {
+  color: #468847 !important;
+  border-color: #d6e9c6 !important;
+}
+
+.form-group.has-success .fileinput .fileinput-preview {
+  color: #468847 !important;
+}
+
+.form-group.has-success .fileinput .thumbnail {
+  border-color: #d6e9c6 !important;
+}
+
+/* file input */
